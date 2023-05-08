@@ -1,11 +1,19 @@
 class MobilePhone:
-    def __init__(self, manufacturer ='China', screen_size = '8.5', num_cores = '9', app = 'si', status = 'Apagado'):
+    def __init__(self, manufacturer, screen_size, num_cores):
         self.manufacturer = manufacturer
         self.screen_size = screen_size
         self.num_cores = num_cores
-        self.app = app
-        self.status = status
+        self.app = []
+        self.status = False
         
+    def switch_on(self):
+        print('Iniciado')
+        self.switch_on = True
+    
+    def switch_off(self):
+        print('Apagado')
+        self.switch_off = False
+    
     def Manufacturer(self):
         return self.manufacturer
     
@@ -22,7 +30,8 @@ class MobilePhone:
         return self.status
     
 
-celular = MobilePhone()
+celular = MobilePhone('China', '8"','9')
+
 
 celular.Manufacturer()
 print("Manufactura: ", celular.manufacturer)
